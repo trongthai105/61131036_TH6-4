@@ -52,7 +52,39 @@ public class LuongLamViec extends Thread{
 				System.out.print("\n"+chuoiNhan);
 				
 				if(chuoiNhan.equals("1")) {
-					GuiFile("D:\HK6\Lap trinh mang\TH 6.4\1.txt");
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\1.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("2")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\2.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("3")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\3.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("4")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\4.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("5")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\5.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("6")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\6.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("7")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\7.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("8")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\8.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("9")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\9.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("10")) {
+					GuiFile("D:\\HK6\\Lap trinh mang\\TH 6.4\\10.txt");
+					buffWrite.flush();
+				}else if(chuoiNhan.equals("0")) {
+					buffWrite.write("Kết thúc"+"\n");
+					buffWrite.flush();
+					break;
 				}
 				
 			}				

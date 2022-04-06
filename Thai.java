@@ -27,7 +27,7 @@ public class Thai {
 				buffWrite.flush();
 				String chuoiNhan = buffRead.readLine();
 				System.out.print("Server: "+ chuoiNhan);
-				if(chuoiGui.equals("Bye")) break;
+				if(chuoiGui.equals("0")) break;
 			}
 			socket.close();			
 		}catch(Exception e) {
