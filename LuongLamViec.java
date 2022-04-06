@@ -17,9 +17,9 @@ public class LuongLamViec extends Thread{
 		this.socketClient = socketClient;
 		this.id = id;
 	}
-	void guifile(String tenFile)throws IOException{
-		FileReader fr = new FileReader(tenFile);
-		BufferedReader buffR = new BufferedReader(fr);
+	void GuiFile(String tenFile)throws IOException{
+		FileReader FileReader = new FileReader(tenFile);
+		BufferedReader buffR = new BufferedReader(FileReader);
 		OutputStream osToClient = socketClient.getOutputStream();
 		OutputStreamWriter write2client = new OutputStreamWriter(osToClient);
 		BufferedWriter buffW = new BufferedWriter(write2client);
@@ -28,7 +28,7 @@ public class LuongLamViec extends Thread{
 			buffW.write(line);
 			buffW.flush();
 		}
-		fr.close();
+		FileReader.close();
 	}
 
 	@Override
@@ -39,8 +39,8 @@ public class LuongLamViec extends Thread{
 		System.out.print("\n");
 		try {
 			OutputStream osToClient = socketClient.getOutputStream();
-			OutputStreamWriter write2Client = new OutputStreamWriter(osToClient);
-			BufferedWriter buffWrite = new BufferedWriter(write2Client);
+			OutputStreamWriter writetoClient = new OutputStreamWriter(osToClient);
+			BufferedWriter buffWrite = new BufferedWriter(writetoClient);
 			
 			InputStream in = socketClient.getInputStream();
 			InputStreamReader inReader = new InputStreamReader(in);
@@ -49,9 +49,10 @@ public class LuongLamViec extends Thread{
 			while (true) {
 				//Nhan du lieu
 				String chuoiNhan = buffRead.readLine();
+				System.out.print("\n"+chuoiNhan);
 				
 				if(chuoiNhan.equals("1")) {
-					guifile("D:\\1.txt");
+					GuiFile("D:\HK6\Lap trinh mang\TH 6.4\1.txt");
 				}
 				
 			}				
